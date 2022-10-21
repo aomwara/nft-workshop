@@ -4,16 +4,12 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-etherscan";
 
 // Template
-const { ROPSTEN_RPC, PRIVATE_KEY, ETHERSCAN_API, RINKEBY_RPC } = process.env;
+const { GOERLI_RPC, PRIVATE_KEY, ETHERSCAN_API } = process.env;
 
 const config: HardhatUserConfig = {
   networks: {
-    ropsten: {
-      url: ROPSTEN_RPC,
-      accounts: [PRIVATE_KEY as string],
-    },
-    rinkeby: {
-      url: RINKEBY_RPC,
+    live: {
+      url: GOERLI_RPC,
       accounts: [PRIVATE_KEY as string],
     },
   },
